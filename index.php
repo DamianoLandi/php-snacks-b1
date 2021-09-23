@@ -53,7 +53,7 @@
             "Nome" => "Gabriele",
             "Cognome" => "Azzurri",
             "Voti" => [
-                7, 8, 5, 6
+                7, 9, 5, 4
             ],
         ],
     ];
@@ -66,6 +66,10 @@
         return ($sum / count($array));
     };
 
+    foreach($students as $student){
+        echo '<p>Nome: ' . $student["Nome"] . '</p><p>Cognome: ' . $student["Cognome"] . '</p><p>Media dei Voti: ' . get_average($student["Voti"]) . '</p> <hr>';
+    }
+    
     ?>
 </body>
 </html>
